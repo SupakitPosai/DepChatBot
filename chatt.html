@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>chat</title>
+ <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <style>
+  body{background-color: rgb(255, 255, 255);}
+  body ,div ,h3 ,P  {
+	margin: 0px;
+	padding: 0px;
+	border:0;
+}
+  
+
+
+.container{width:100%;height:auto;position:relative;background-color: transparent;float:left;}
+
+ .myself{
+  display:block;
+	min-height:70px;
+	color: #afafaf;	
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+}
+
+
+ .myself .content{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background-color:#8cc8e2;
+
+	max-width:60%;
+	height:auto;
+	padding: 5px;
+	color:#666;
+	font-size:12px;
+	float:right;
+	word-wrap:break-word
+}
+
+ .myself .username{
+	float:right;
+	height: 45px;
+	width: 45px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	display:inline;
+	color:#333333;
+	
+}
+
+.other{
+  display:block;
+	min-height:70px;
+	color: #afafaf;	
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+}
+
+
+ .other .content{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background-color:#dcdcdc;
+	max-width:60%;
+	height:auto;
+	padding: 5px;
+	color:#666;
+	font-size:12px;
+	float:left;
+	word-wrap:break-word
+	
+}
+ h3{
+	font-size:16px;
+	padding:2px 0 5px 0;
+	
+	font-weight: 100;
+	color:#333333;
+	
+}
+ .other .username{
+	float:left;
+	height: 45px;
+	width: 45px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	display:inline;
+color:#333333;
+}
+
+.time{
+	color: #666;
+	text-align: right;
+	
+	display: block;
+}
+.right_triangle{  
+				float:right;
+                height:0px;    
+                width:0px;    
+                border-width:8px;    
+                border-style:solid;    
+                border-color:transparent transparent transparent #8cc8e2;    
+                position: relative;  
+                top:12px;  
+            }  
+
+.left_triangle{  
+				float:left;
+                height:0px;    
+                width:0px;    
+                border-width:8px;    
+                border-style:solid;    
+                border-color:transparent #dcdcdc transparent transparent ;    
+                position: relative;  
+                top:12px;  
+            }  
+
+.circle{ /* ชื่อคลาสต้องตรงกับ <img class="circle"... */
+    height: 45px;  /* ความสูงปรับให้เป็นออโต้ */
+    width: 45px;  /* ความสูงปรับให้เป็นออโต้ */
+    border: 3px solid #fff; /* เส้นขอบขนาด 3px solid: เส้น #fff:โค้ดสีขาว */
+    border-radius: 50%; /* ปรับเป็น 50% คือความโค้งของเส้นขอบ*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* เงาของรูป */
+				}
+
+  </style>
+ </head>
+
+ <body>
+
+
+<script language=javascript>
+	var int=self.setInterval("checkWebstring()",200);
+	var body = document.body;
+	function checkWebstring()
+	{
+		
+		
+		if(window.AppInventor.getWebViewString()!=""){
+			var dom=document.createElement("div");
+			dom.innerHTML=window.AppInventor.getWebViewString();
+			body.appendChild(dom);
+			window.AppInventor.setWebViewString("");
+			body.scrollTop = body.scrollHeight; 
+		  }
+
+	}
+</script>
+ </body>
+</html>
